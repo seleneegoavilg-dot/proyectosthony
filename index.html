@@ -1,30 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3D Flower, CSS + JS</title>
-  <link rel="stylesheet" href="https://public.codepenassets.com/css/reset-2.0.min.css">
-<link rel="stylesheet" href="css/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Pokémon</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Carga de Three.js para renderizado 3D -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Carga de OrbitControls para rotar 360° con el mouse -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 </head>
 <body>
-<div id="main-content">
-  <div class="container" id="start-btn-container">
-    <button id="start-btn" class="button"></button>
-  </div>
-  <audio id="bg-music" src="musica/Mon Laferte - Química Mayor  letra.mp3.mpeg" preload="none"></audio>
-  <canvas id="galaxy-canvas" style="display:none;opacity:0;will-change:opacity;position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:10;"></canvas>
-  <div class="wrapper" style="display:none;">
-      <div class="flower"></div>
-  </div>
-  <div class="flower-message" style="display:none;"></div>
-</div>
-<style>
-/* Eliminado keyframes spin: no se usa loader */
-</style>
-<!-- partial -->
-<script src="js/main.js" defer></script>
 
+    <div id="portal-container">
+        <!-- Lienzo 3D donde se dibujarán las estrellas y la galaxia -->
+        <canvas id="webgl-canvas"></canvas>
+
+        <!-- Pantalla de bienvenida -->
+        <div id="welcome-screen">
+            <button id="start-button">Pulsa aquí</button>
+        </div>
+
+        <!-- Tarjeta Pop-up (Modal) para mostrar los detalles -->
+        <div id="card-modal" class="modal hidden">
+            <div class="modal-content">
+                <img id="modal-image" src="" alt="Pokémon">
+                <h2 id="modal-title">Título</h2>
+                <p id="modal-text">Mensaje especial...</p>
+                <button id="close-modal-btn">Volver ❤️</button>
+            </div>
+        </div>
+    </div>
+<!-- Colócalo antes de cerrar el </body> -->
+<audio id="background-music" src="audio/cancion.mp3" loop></audio>
+    <script src="js/script.js"></script>
 </body>
 </html>
+
+
+
