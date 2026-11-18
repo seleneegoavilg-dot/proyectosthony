@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Edición Especial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Contenedor de partículas amarillo neón -->
+  <div id="particles-container"></div>
+
+  <!-- 1. PANTALLA DE CARGA -->
+  <div id="loader-screen" class="screen active">
+    <div class="pokedex-loader">
+      <p class="pixel-text">SINCRONIZANDO DATOS...</p>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. SOBRE ESPECIAL (BOOSTER PACK) -->
+  <div id="pack-screen" class="screen">
+    <h2 class="pixel-title">¡SOBRE MISTERIOSO DETECTADO!</h2>
+    <p class="hint-text">Desliza o haz clic sobre la línea punteada para abrir</p>
+    
+    <div class="booster-pack" id="booster-pack">
+      <div class="pack-top" id="pack-top">
+        <span>✂️ RASGAR AQUÍ ✂️</span>
+      </div>
+      <div class="pack-body">
+        <div class="pack-logo">POKÉMON<br><small>EDICIÓN ÚNICA</small></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. CARTA HOLOGRÁFICA SECRETA (ANTHONY & SELENE) -->
+  <div id="secret-card-screen" class="screen">
+    <div class="holo-card-wrapper" id="holo-wrapper">
+      <div class="holo-card" id="holo-card">
+        <div class="holo-glare"></div>
+        <div class="card-header">
+          <span class="card-tag">DÚO LEGENDARIO</span>
+          <span class="card-hp">HP ∞</span>
+        </div>
+        <h3 class="card-name">Anthony & Selene</h3>
+        
+        <div class="card-art">
+          <img src="img/213.jfif" alt="Anthony y Selene" onerror="this.src='https://via.placeholder.com/260x180/1a1625/a855f7?text=Anthony+%26+Selene+2D'">
+        </div>
+
+        <div class="card-attacks">
+          <div class="attack">
+            <span class="energy">🟣🔵</span>
+            <div class="attack-info">
+              <strong>Conexión Infinita</strong>
+              <p>Aumenta la felicidad al máximo sin importar la distancia.</p>
+            </div>
+            <span class="damage">999+</span>
+          </div>
+          <div class="attack">
+            <span class="energy">⚫✨</span>
+            <div class="attack-info">
+              <strong>Escudo tipo fantasma</strong>
+              <p>Protege este equipo contra cualquier mal día.</p>
+            </div>
+            <span class="damage">∞</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span>Rareza: ★★★ Única en el Universo</span>
+        </div>
+      </div>
+    </div>
+    <button id="btn-to-bouquet" class="pixel-btn">VER TU RAMO FLORECIENTE ➔</button>
+  </div>
+
+  <!-- 4. RAMO DE CARTAS POKÉMON Y POKÉBALLS -->
+  <div id="bouquet-screen" class="screen">
+    <header class="bouquet-header">
+      <h1 class="pixel-title">PARA TU 💜</h1>
+      <p class="hint-text">Las cartas han florecido para ti ✨</p>
+    </header>
+
+    <!-- 9 Pokéballs en fila con barrido y explosión de letras: TE EXTRAÑO -->
+    <div class="balls-row" id="balls-row">
+      <div class="ball-slot" style="--i: 0"><div class="ball pokeball"></div><span class="boom-letter">T</span></div>
+      <div class="ball-slot" style="--i: 1"><div class="ball masterball"></div><span class="boom-letter">E</span></div>
+      <div class="ball-slot" style="--i: 2; margin-left: 10px;"><div class="ball pokeball"></div><span class="boom-letter">E</span></div>
+      <div class="ball-slot" style="--i: 3"><div class="ball masterball"></div><span class="boom-letter">X</span></div>
+      <div class="ball-slot" style="--i: 4"><div class="ball pokeball"></div><span class="boom-letter">T</span></div>
+      <div class="ball-slot" style="--i: 5"><div class="ball masterball"></div><span class="boom-letter">R</span></div>
+      <div class="ball-slot" style="--i: 6"><div class="ball pokeball"></div><span class="boom-letter">A</span></div>
+      <div class="ball-slot" style="--i: 7"><div class="ball masterball"></div><span class="boom-letter">Ñ</span></div>
+      <div class="ball-slot" style="--i: 8"><div class="ball pokeball"></div><span class="boom-letter">O</span></div>
+    </div>
+
+    <div class="bouquet-container">
+
+
+      <!-- Tallos florecientes con las 6 cartas -->
+      <div class="blooming-cards-area">
+      
+        <!-- FUNKO IZQUIERDA (En la fila de cartas con su tallo) -->
+        <div class="floret-stem" style="--stem-rot: -38deg; --stem-height: 150px; --stem-delay: 0.05s;">
+          <div class="poke-card funko-card">
+            <img src="img/blastoi.jfif" alt="Funko Pop Blastoise">
+          </div>
+        </div>
+        <!-- FUNKO DERECHA (En la fila de cartas con su tallo) -->
+        <div class="floret-stem" style="--stem-rot: 38deg; --stem-height: 150px; --stem-delay: 0.95s;">
+          <div class="poke-card funko-card">
+            <img src="img/chiki.jfif" alt="Funko Pop Squirtle">
+          </div>
+        </div>
+        <div class="floret-stem" style="--stem-rot: -26deg; --stem-delay: 0.1s;">
+          <div class="poke-card">
+            <img src="https://images.pokemontcg.io/bw11/99_hires.png" alt="Hydreigon">
+            <span>Hydreigon</span>
+          </div>
+        </div>
+        <div class="floret-stem" style="--stem-rot: -16deg; --stem-delay: 0.25s;">
+          <div class="poke-card">
+            <img src="https://images.pokemontcg.io/swsh11/186_hires.png" alt="Giratina">
+            <span>Giratina</span>
+          </div>
+        </div>
+        <div class="floret-stem" style="--stem-rot: -5deg; --stem-delay: 0.4s;">
+          <div class="poke-card">
+            <img src="https://images.pokemontcg.io/xy3/62_hires.png" alt="Tyrantrum">
+            <span>Tyrantrum</span>
+          </div>
+        </div>
+        <div class="floret-stem" style="--stem-rot: 5deg; --stem-delay: 0.55s;">
+          <div class="poke-card">
+            <img src="https://images.pokemontcg.io/xy4/35_hires.png" alt="Mega Gengar">
+            <span>M-Gengar</span>
+          </div>
+        </div>
+        <div class="floret-stem" style="--stem-rot: 16deg; --stem-delay: 0.7s;">
+          <div class="poke-card">
+            <img src="https://images.pokemontcg.io/xy1/80_hires.png" alt="Skarmory">
+            <span>Skarmory</span>
+          </div>
+        </div>
+        <div class="floret-stem" style="--stem-rot: 26deg; --stem-delay: 0.85s;">
+          <div class="poke-card">
+            <img src="https://images.pokemontcg.io/swsh6/46_hires.png" alt="Glasty">
+            <span>Glasty</span>
+          </div>
+        </div>
+        <!-- PELUCHE IZQUIERDA (En el centro del ramo, ligeramente sobresalido) -->
+        <div class="plush-center plush-left">
+          <img src="img/giratina.jfif" alt="Peluche Giratina">
+        </div>
+
+        <!-- PELUCHE DERECHA (En el centro del ramo, ligeramente sobresalido) -->
+        <div class="plush-center plush-right">
+          <img src="img/dino.jfif" alt="Peluche Tyrantrum">
+        </div>
+      </div>
+      
+
+      <!-- Papel envoltorio estilo ramo coreano realista con pliegues y lazo -->
+      <div class="bouquet-wrap-realistic">
+        <div class="paper-back-left"></div>
+        <div class="paper-back-right"></div>
+        <div class="paper-inner-white"></div>
+        <div class="paper-front-left"></div>
+        <div class="paper-front-right"></div>
+        <div class="paper-base"></div>
+        <div class="silk-bow">
+          <div class="bow-loop-l"></div>
+          <div class="bow-loop-r"></div>
+          <div class="bow-tail-l"></div>
+          <div class="bow-tail-r"></div>
+          <div class="bow-knot"></div>
+          <div class="gift-tag"> 💜💜💜💜💜</div>
+        </div>
+      </div>
+    </div>
+
+    <button id="btn-view-secret" class="mini-btn">🃏 Ver Carta Secreta</button>
+  </div>
+
+  <!-- BOT FLOTANTE: CHAT v1 -->
+  <div id="chat-bot" class="chat-bot">
+    <div class="chat-bubble" id="chat-bubble">
+      ¡Hola ANTHONY! Toca el sobre para descubrir lo que SELENE preparó ✨
+    </div>
+    <div class="bot-avatar" id="bot-avatar" title="Tócame para hablar">
+      <div class="bot-head">
+        <div class="bot-screen">
+          <span class="eye">^</span>
+          <span class="mouth">◡</span>
+          <span class="eye">^</span>
+        </div>
+      </div>
+      <div class="bot-glow"></div>
+    </div>
+  </div>
+<audio id="bg-music" src="music/los monos.mp3" loop autoplay></audio>
+  <script src="script.js"></script>
+</body>
+</html>
+
